@@ -1,0 +1,13 @@
+{
+  "name": "getting-started",
+  "version": "1.0.0",
+  "description": "Getting start simple vitest test methods",
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC"
+}
