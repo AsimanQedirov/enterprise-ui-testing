@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Getting start simple vitest test methods",
   "devDependencies": {
+    "@vitest/ui": "^4.0.18",
     "vitest": "^4.0.18"
   },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "author": "",
   "license": "ISC"
