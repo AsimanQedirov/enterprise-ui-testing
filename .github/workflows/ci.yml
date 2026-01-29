@@ -11,3 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Running unit tests"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building application..."
