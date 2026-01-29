@@ -1,4 +1,4 @@
-name: Run Unit Tests
+name: Unit tests
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  unit-test:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Running unit tests..."
+      - run: echo "Running unit tests"
