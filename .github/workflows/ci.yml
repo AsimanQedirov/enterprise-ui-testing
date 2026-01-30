@@ -10,7 +10,22 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Running unit tests"
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+      
+      - name: Move to project directory
+        run: cd examples/getting-started
+        
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Run unit tests
+        run: yarn test
   build:
     runs-on: ubuntu-latest
     steps:
