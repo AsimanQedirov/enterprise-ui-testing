@@ -18,14 +18,13 @@ jobs:
         with:
           node-version: 20
       
-      - name: Move to project directory
-        run: cd examples/getting-started
-        
       - name: Install dependencies
         run: yarn install
+        working-directory: examples/getting-started
       
       - name: Run unit tests
         run: yarn test
+        working-directory: examples/getting-started
   build:
     runs-on: ubuntu-latest
     steps:
