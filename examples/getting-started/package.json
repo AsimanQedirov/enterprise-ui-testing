@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "build": "echo \"Building application...\""
   },
   "author": "",
   "license": "ISC"

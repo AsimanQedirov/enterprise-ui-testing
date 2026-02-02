@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 20
+          cache: "yarn"
       
       - name: Install dependencies
         run: yarn install
@@ -29,4 +30,19 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Building application..."
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: "yarn"
+      
+      - name: Install dependencies
+        run: yarn install
+        working-directory: examples/getting-started
+      
+      - name: Build application
+        run: yarn build
+        working-directory: examples/getting-started
