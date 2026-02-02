@@ -10,8 +10,41 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Running unit tests"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          cache-dependency-path: examples/getting-started/yarn.lock
+      
+      - name: Install dependencies
+        run: yarn install
+        working-directory: examples/getting-started
+      
+      - name: Run unit tests
+        run: yarn test
+        working-directory: examples/getting-started
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Building application..."
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          cache-dependency-path: examples/getting-started/yarn.lock
+      
+      - name: Install dependencies
+        run: yarn install
+        working-directory: examples/getting-started
+      
+      - name: Build application
+        run: yarn build
+        working-directory: examples/getting-started
