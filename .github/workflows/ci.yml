@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          working-directory: examples/getting-started
-          cache: "yarn"
+          cache: yarn
+          cache-dependency-path: examples/getting-started/yarn.lock
       
       - name: Install dependencies
         run: yarn install
@@ -32,14 +32,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          working-directory: examples/getting-started
-          cache: "yarn"
+          cache: yarn
+          cache-dependency-path: examples/getting-started/yarn.lock
       
       - name: Install dependencies
         run: yarn install
