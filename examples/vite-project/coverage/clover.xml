@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1770127076395" clover="3.2.0">
+  <project timestamp="1770127076395" name="All files">
+    <metrics statements="5" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3" elements="10" coveredelements="8" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
+    <file name="counter.tsx" path="/Users/asimanqedirov/Desktop/personal-folders/enterprise-ui-test/examples/vite-project/src/counter/counter.tsx">
+      <metrics statements="5" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
+      <line num="8" count="6" type="stmt"/>
+      <line num="9" count="6" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
